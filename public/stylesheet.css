@@ -1,0 +1,13 @@
+.inspiro-jumbotron{
+    background-image: url("images/11.jpg");
+}
+
+.inspiro-btn-refresh {
+    position: absolute;
+    top:10px;
+    right: 10px;
+}
+
+.inspiro-card {
+    width: 33%;
+}
