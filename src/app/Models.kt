@@ -4,7 +4,7 @@ data class Inspiration(
         val id: Long,
         val userId: Long,
         val fileUrl: String,
-        val tags: List<Tag>,
+        val tags: Array<Tag>,
         val generatedDate: Long
 )
 

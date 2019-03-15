@@ -12,24 +12,28 @@ import react.dom.i
 
 interface ChipProps : RProps {
     var text: String
-    var callback: () -> Unit
+    var allowClose: Boolean
+    var callback: (() -> Unit)?
 }
 
 class ChipComponent(props: ChipProps) : RComponent<ChipProps, RState>(props) {
     override fun RBuilder.render() {
         div("chip fade show") {
             +props.text
-            button(classes = "close", type = ButtonType.button) {
-                attrs {
-                    onClickFunction = { props.callback() }
+            if(props.allowClose) {
+                button(classes = "close", type = ButtonType.button) {
+                    attrs {
+                        onClickFunction = { props.callback?.invoke() }
+                    }
+                    i(classes = "material-icons") { +"cancel" }
                 }
-                i(classes = "material-icons") { +"cancel" }
             }
         }
     }
 }
 
-fun RBuilder.chip(text: String, callback: () -> Unit) = child(ChipComponent::class) {
+fun RBuilder.chip(text: String, allowClose: Boolean = false, callback: (() -> Unit)? = null) = child(ChipComponent::class) {
     attrs.text = text
+    attrs.allowClose = allowClose
     attrs.callback = callback
 }

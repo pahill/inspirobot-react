@@ -1,5 +1,6 @@
 package home
 
+import app.BASE_URL
 import chip.chip
 import inspiration.inspiration
 import kotlinext.js.jsObject
@@ -12,8 +13,6 @@ import react.dom.i
 import tageditor.tagEditor
 import utils.AxiosConfigSettings
 import utils.axios
-
-const val BASE_URL = "http://0.0.0.0:8080"
 
 interface InspirationState : RState {
     var inspiration: Inspiration?
@@ -39,7 +38,7 @@ class Home : RComponent<RProps, InspirationState>() {
                 div("card-body") {
                     tagEditor { addChip(it) }
                     div("container") {
-                        this@Home.state.tags.forEachIndexed { index, text -> chip(text) { removeChip(index) } }
+                        this@Home.state.tags.forEachIndexed { index, text -> chip(text, true) { removeChip(index) } }
                     }
                 }
             }

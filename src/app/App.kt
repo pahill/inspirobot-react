@@ -14,6 +14,8 @@ import react.router.dom.route
 import react.router.dom.switch
 import search.Search
 
+const val BASE_URL = "http://0.0.0.0:8080"
+
 class App : RComponent<RProps, RState>() {
     override fun RBuilder.render() {
         browserRouter {

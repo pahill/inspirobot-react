@@ -1,6 +1,6 @@
 package inspiration
 
-import home.BASE_URL
+import app.BASE_URL
 import home.Inspiration
 import react.RBuilder
 import react.RComponent
