@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@jetbrains/kotlin-react-router-dom": "^4.3.1-pre.67",
     "axios": "^0.18.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "react-scripts-kotlin": "3.0.3"

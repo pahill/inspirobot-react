@@ -1,4 +1,4 @@
-package app
+package home
 
 data class Inspiration(
         val id: Long,

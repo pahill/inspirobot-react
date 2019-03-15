@@ -1,7 +1,7 @@
 package inspiration
 
-import app.BASE_URL
-import app.Inspiration
+import home.BASE_URL
+import home.Inspiration
 import react.RBuilder
 import react.RComponent
 import react.RProps
